@@ -1,0 +1,20 @@
+server:
+  port: 2021
+spring:
+  application:
+    name: service-order
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+  client:
+    service-url:
+      defaultZone: http://xgf:123456@localhost:8761/eureka/
+feign:
+  hystrix:
+    enabled: true
+logging:
+  level:
+    root: info
+    org.springframework.cloud.sleuth: debug
+

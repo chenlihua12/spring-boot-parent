@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: ms-config
+  cloud:
+    config:
+      uri: http://localhost:2070/
+      profile: dev
+      label: master

@@ -1,0 +1,13 @@
+server:
+  port: 2020
+spring:
+  application:
+    name: service-user
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+  client:
+    service-url:
+      defaultZone: http://xgf:123456@localhost:8761/eureka/
+debug: true

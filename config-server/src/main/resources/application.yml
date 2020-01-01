@@ -1,0 +1,12 @@
+server:
+  port: 2070
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/fei_ji_chang/spring-cloud-config-test.git
+          username: 17608487674
+          password: xgf19940908
